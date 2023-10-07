@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EG Film tourism</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfGdszBxDjuK3mogS7WpRItRyP1ifwChg7JQ&usqp=CAU">
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            box-sizing: border-box;
+            background: url(https://th.bing.com/th/id/R.36899e007d1a64831d4c1aca02f43b21?rik=iKuSUUmE%2bkfrIw&pid=ImgRaw&r=0);
+
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            height: 100vh;
+
+           
+
+
+
+        }
+
+        #backLog {
+
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #card {
+
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: rgb(172, 172, 248);
+            height: 30vh;
+
+            border-radius: 10px;
+            padding: 30px;
+
+
+        }
+
+        #em {
+            padding: auto;
+            margin-left: 80px;
+
+        }
+
+        #pass {
+            padding: auto;
+            margin: 50px;
+        }
+        button{
+        margin-left: 140px;
+        width: 50px;
+        }
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="backLog">
+
+        <form id="card" action="trips.html">
+            <label for="em"> EMAIL </label>
+            <input name="em" id="em" type="email" required>
+            
+            <br><br>
+            <label for="pass">PASSWORD</label>
+            <input id="pass" type="password" required>
+            <br> 
+            <button type="submit" >log in </button>
+            <!-- onclick="nextPage(this)" -->
+
+
+
+        </form>
+
+
+
+
+    </div>
+    <script>
+//         var form =document.forms[0]
+//         form.addEventListener("submit",function(e){
+//             var is_valid=true
+//             e.preventDefault()
+             
+
+    
+//     if(isVaild == true){
+//     form.submit();
+// }
+
+
+
+
+
+
+
+//         })
+
+var form = document.getElementsByTagName("form")[0]
+var email=document.getElementsByTagName("input")[0]
+var password=document.getElementsByTagName("input")[1]
+
+
+form.addEventListener("submit",function(e){
+    var isVlaid= true
+    e.preventDefault()
+    console.log(email)
+    if (email.value.length <=3){
+        isVlaid=false
+        alert("enter valid email")
+        console.log("hgux")
+        
+    }
+
+    if(password.value.length<8){
+        isVlaid=false
+        alert("enter strong password")
+        console.log("cndi")
+    }
+    
+    
+if (isVlaid){
+    form.submit()
+}
+
+
+})
+
+
+
+   
+    
+
+
+
+
+        // function nextPage(button1){
+        //     location.href="trips.html";
+        // }
+
+
+    </script>
+    
+
+</body>
+
+</html>
